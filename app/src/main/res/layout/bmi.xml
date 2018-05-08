@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/bmi"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="livelowcarb.livelowcarbapp.bmi"
+    android:background="@color/colorAccent">
+
+
+    <!-- esta es la barra del menu de la app aca esta el nombre -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <android.support.design.widget.AppBarLayout
+                android:id="@+id/appbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/appbar_padding_top"
+                android:theme="@style/AppTheme.AppBarOverlay"
+                android:paddingBottom="16dp">
+
+                <android.support.v7.widget.Toolbar
+                    android:id="@+id/toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="120px"
+                    android:background="?attr/colorPrimary"
+                    app:popupTheme="@style/AppTheme.PopupOverlay"
+                    android:weightSum="1">
+                    <ImageView
+                        android:src="@drawable/logohome"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.81" />
+                </android.support.v7.widget.Toolbar>
+            </android.support.design.widget.AppBarLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingRight="10dp"
+                android:paddingLeft="10dp">
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/boton1"
+                    android:paddingTop="5dp"
+                    android:layout_marginTop="20dp">
+
+                    <TextView
+                        android:text="Mass"
+                        android:layout_width="wrap_content"
+                        android:id="@+id/textView10"
+                        android:layout_weight="0.32"
+                        android:textSize="24sp"
+                        android:textAlignment="center"
+                        android:textColor="@android:color/background_light"
+                        android:textStyle="normal|bold"
+                        android:gravity="center"
+                        android:layout_height="52dp" />
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:inputType="numberDecimal"
+                        android:ems="3"
+                        android:id="@+id/mass"
+                        android:layout_weight="0.16"
+                        android:layout_marginTop="1.5dp"
+                        android:background="@android:color/background_light"
+                        android:textColorLink="?attr/colorPrimary"
+                        android:textColor="?attr/actionMenuTextColor"
+                        android:layout_marginLeft="20dp"
+                        android:textStyle="normal|bold"
+                        android:textAlignment="center" />
+
+
+                    <TextView
+                        android:text="Kg"
+                        android:layout_width="wrap_content"
+                        android:id="@+id/textView9"
+                        android:layout_height="match_parent"
+                        android:textSize="24sp"
+                        android:gravity="center"
+                        android:textStyle="normal|bold"
+                        android:textColor="@android:color/background_light"
+                        android:layout_weight="0.03" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/boton2"
+                    android:paddingTop="5dp"
+                    android:layout_marginTop="10dp">
+
+                    <TextView
+                        android:text="Heigth"
+                        android:layout_width="wrap_content"
+                        android:id="@+id/textView11"
+                        android:layout_weight="0.32"
+                        android:textSize="24sp"
+                        android:textAlignment="center"
+                        android:textColor="@android:color/background_light"
+                        android:textStyle="normal|bold"
+                        android:gravity="center"
+                        android:layout_height="52dp" />
+
+                    <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:inputType="numberDecimal"
+                        android:ems="3"
+                        android:id="@+id/heigth"
+                        android:layout_marginTop="1.5dp"
+                        android:background="@android:color/background_light"
+                        android:textColorLink="?attr/colorPrimary"
+                        android:textColor="?attr/actionMenuTextColor"
+                        android:layout_marginLeft="15dp"
+                        android:textStyle="normal|bold"
+                        android:textAlignment="center"
+                        android:selectAllOnFocus="true"
+                        android:layout_weight="0.16" />
+
+                    <TextView
+                        android:text="cm"
+                        android:layout_width="wrap_content"
+                        android:id="@+id/textView13"
+                        android:layout_height="match_parent"
+                        android:textSize="24sp"
+                        android:gravity="center"
+                        android:textStyle="normal|bold"
+                        android:textColor="@android:color/background_light"
+                        android:layout_weight="0.02" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/botonesinferiores"
+                    android:layout_marginTop="10dp">
+
+
+                    <Button
+                        android:text="Calculate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/calculate"
+                        android:layout_weight="1"
+                        android:background="?android:attr/actionBarItemBackground"
+                        android:textColor="@android:color/background_light"
+                        android:textStyle="normal|bold"
+                        android:textSize="16sp"
+                        android:onClick="bmicalculate" />
+
+                    <Button
+                        android:text="Clean"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/clean"
+                        android:layout_weight="0.24"
+                        android:background="?android:attr/actionBarItemBackground"
+                        android:textColor="@android:color/background_light"
+                        android:textStyle="normal|bold"
+                        android:textSize="16sp"
+                        android:onClick="callclean" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:text="TextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/result_bmi"
+                        android:layout_weight="0.32"
+                        android:textSize="25sp"
+                        android:textAlignment="center"
+                        android:textColor="@android:color/background_light"
+                        android:textStyle="normal|bold"
+                        android:gravity="center"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginTop="10dp" />
+
+                    <TextView
+                        android:text="TextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/body"
+                        android:layout_weight="0.32"
+                        android:textSize="25sp"
+                        android:textAlignment="center"
+                        android:textColor="@android:color/background_light"
+                        android:textStyle="normal|bold"
+                        android:gravity="center"
+                        android:layout_marginBottom="15dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:layout_width="150dp"
+                        app:srcCompat="@drawable/pesoideal"
+                        android:id="@+id/image"
+                        android:layout_weight="1"
+                        android:layout_height="200dp" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</android.support.design.widget.CoordinatorLayout>

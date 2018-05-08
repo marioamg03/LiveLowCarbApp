@@ -1,0 +1,202 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="livelowcarb.livelowcarbapp.MainActivity$PlaceholderFragment"
+    android:background="@color/colorAccent">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:text="Gadgets"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView"
+                android:layout_weight="1"
+                android:textAppearance="@android:style/TextAppearance.Material.Notification.Emphasis"
+                android:textSize="55sp"
+                android:fontFamily="serif"
+                android:textColor="@android:color/background_light" />
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:weightSum="1"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentStart="true"
+                android:gravity="center">
+
+                <!--Espacio en blanco entre las imagenes-->
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp"/>
+                <!--Espacio en blanco entre las imagenes-->
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageButton
+                        app:srcCompat="@drawable/imb"
+                        android:id="@+id/imageButton"
+                        android:layout_height="122dp"
+                        android:layout_width="122dp"
+                        android:onClick="irbmr" />
+
+                    <!--Espacio en blanco entre las imagenes y el texto-->
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="10dp"
+                        android:layout_height="match_parent"/>
+                    <!--Espacio en blanco entre las imagenes y el texto-->
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center">
+
+                        <TextView
+                            android:text="BMR"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/textView3"
+                            android:textStyle="normal|bold"
+                            android:textColor="@android:color/background_light" />
+
+                        <TextView
+                            android:text="Basal metabolic rate or BMR for short, is a  system used to calculate which is the minimum  energy requirement for a human being to stay  alive."
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/textView4"
+                            android:textColor="@android:color/background_light" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <!--Espacio en blanco entre las imagenes-->
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp"/>
+                <!--Espacio en blanco entre las imagenes-->
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageButton
+                        app:srcCompat="@drawable/icc"
+                        android:id="@+id/imageButton1"
+                        android:layout_height="122dp"
+                        android:layout_width="122dp"
+                        android:onClick="irwhr" />
+
+                    <!--Espacio en blanco entre las imagenes y el texto-->
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="10dp"
+                        android:layout_height="match_parent"/>
+                    <!--Espacio en blanco entre las imagenes y el texto-->
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center">
+
+                        <TextView
+                            android:text="WHR"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/textView5"
+                            android:textStyle="normal|bold"
+                            android:textColor="@android:color/background_light" />
+
+                        <TextView
+                            android:text="The waist / hip radio (WHR) index is what you  obtained by dividing the waist circunference of a  person by the perimeter of your hip."
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/textView6"
+                            android:textColor="@android:color/background_light" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!--Espacio en blanco entre las imagenes-->
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="10dp"/>
+                <!--Espacio en blanco entre las imagenes-->
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_weight="0.21"
+                    android:layout_height="wrap_content">
+
+                    <ImageButton
+                        app:srcCompat="@drawable/imc"
+                        android:id="@+id/imageButton2"
+                        android:layout_height="122dp"
+                        android:layout_width="122dp"
+                        android:onClick="irbmi" />
+
+                    <!--Espacio en blanco entre las imagenes y el texto-->
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="10dp"
+                        android:layout_height="match_parent"/>
+                    <!--Espacio en blanco entre las imagenes y el texto-->
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center">
+
+                        <TextView
+                            android:text="BMI"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/textView7"
+                            android:textStyle="normal|bold"
+                            android:textColor="@android:color/background_light" />
+
+                        <TextView
+                            android:text="The body mass index (BMI) is a measure of  association between the mass and size of an  individual."
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/textView8"
+                            android:textColor="@android:color/background_light" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>
+
+</RelativeLayout>
