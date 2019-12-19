@@ -1,7 +1,7 @@
 package livelowcarb.livelowcarbapp;
 
 import android.content.Intent;
-import android.support.v4.app.Fragment;
+import androidx.fragment.app.Fragment;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -15,6 +15,8 @@ import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.ToggleButton;
+
+
 
 import java.text.DecimalFormat;
 import java.util.Objects;
@@ -3473,7 +3475,7 @@ public class home1 extends Fragment {
     }
 
     public void llenadoA (){
-        for (int i = 0; i < 280; i++){
+        for (int i = 0; i < 270; i++){
             Alimentos[i] = food[i];
         }
     }
