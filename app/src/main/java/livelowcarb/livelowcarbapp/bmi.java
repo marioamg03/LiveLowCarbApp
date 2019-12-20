@@ -25,14 +25,13 @@ public class bmi extends AppCompatActivity {
 
         // Created variables for the app whr
 
-        mass= findViewById(R.id.mass);
-        heigth= findViewById(R.id.heigth);
+        mass = findViewById(R.id.mass);
+        heigth = findViewById(R.id.heigth);
 
-        result_bmi= findViewById(R.id.result_bmi);
-        body= findViewById(R.id.body);
+        result_bmi = findViewById(R.id.result_bmi);
+        body = findViewById(R.id.body);
 
-
-        image= findViewById(R.id.image);
+        image = findViewById(R.id.image);
 
         clean();
     }

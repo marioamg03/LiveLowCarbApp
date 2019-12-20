@@ -40,5 +40,11 @@
     <string name="obesity_text">Obesity</string>
     <string name="morbid_obesity_text">Morbid obesity</string>
     <string name="enter_your_gender">Enter Your Gender</string>
+    <string name="day_text">day</string>
+    <string name="day_physical_text">day according to their physical activity</string>
+    <string name="enter_your_physical_text">Enter Your Physical Effort</string>
+    <string name="whr_standard_text">Within the standard body</string>
+    <string name="whr_pear_text">Pear body</string>
+    <string name="whr_apple_text">Apple body</string>
 
 </resources>

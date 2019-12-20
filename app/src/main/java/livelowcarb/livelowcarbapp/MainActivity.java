@@ -33,23 +33,11 @@ public class MainActivity extends AppCompatActivity {
         mSectionsPagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager());
 
         // Set up the ViewPager with the sections adapter.
-        mViewPager = (ViewPager) findViewById(R.id.container);
+        mViewPager = findViewById(R.id.container);
         mViewPager.setAdapter(mSectionsPagerAdapter);
 
-        TabLayout tabLayout = (TabLayout) findViewById(R.id.tabs);
+        TabLayout tabLayout = findViewById(R.id.tabs);
         tabLayout.setupWithViewPager(mViewPager);
-
-
-//        Accion para un boton flotante
-
-//        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-//        fab.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-//                        .setAction("Action", null).show();
-//            }
-//        });
 
     }
 
@@ -87,24 +75,18 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public Fragment getItem(int position) {
-        switch (position) {
+            switch (position) {
+                case 0:
+                    home1 tab1 = new home1();
+                    return tab1;
 
-            case 0:
-            home1 tab1 = new home1();
-                return tab1;
+                case 1:
+                    home2 tab2 = new home2();
+                    return tab2;
 
-            case 1:
-            home2 tab2 = new home2();
-                return tab2;
-
-            // Pagina 3 Oculta
-        //    case 2:
-       //     home1 tab3 = new home2();
-      //      return tab3;
-
-            default:
-                return null;
-        }
+                default:
+                    return null;
+            }
         }
 
         @Override
@@ -143,4 +125,4 @@ public class MainActivity extends AppCompatActivity {
         startActivity(i);
     }
 
-    }
+}

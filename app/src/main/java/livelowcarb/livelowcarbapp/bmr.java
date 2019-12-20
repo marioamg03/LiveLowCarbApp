@@ -43,11 +43,9 @@ public class bmr extends AppCompatActivity {
 
     public void bmrcalculate (View view) {
 
-        String valor1=weigth.getText().toString();
-        String valor2=heigth.getText().toString();
-        String valor3=age.getText().toString();
-
-
+        String valor1 = weigth.getText().toString();
+        String valor2 = heigth.getText().toString();
+        String valor3 = age.getText().toString();
 
         //Verifico la seleccion de genero.
         if (!female.isChecked() && !men.isChecked()) {
@@ -70,8 +68,8 @@ public class bmr extends AppCompatActivity {
             else
             {
                 //asigno valor numerico a los campos
-                double weigth=Double.parseDouble(valor1);
-                double heigth=Double.parseDouble(valor2);
+                double weigth = Double.parseDouble(valor1);
+                double heigth = Double.parseDouble(valor2);
                 double age = Math.round(Double.parseDouble(valor3));
 
                 //declaro las variables TMB y fisico
@@ -83,7 +81,7 @@ public class bmr extends AppCompatActivity {
                 // Y verifico el esfuerzo fisico
                 if (!low.isChecked() && !average.isChecked() && !high.isChecked()) {
 
-                    Toast notificacion = Toast.makeText(this,"Enter Your Physical Effort", Toast.LENGTH_LONG);
+                    Toast notificacion = Toast.makeText(this, getString(R.string.enter_your_physical_text), Toast.LENGTH_LONG);
                     notificacion.show();
                 }
                 else{
@@ -101,50 +99,34 @@ public class bmr extends AppCompatActivity {
                     }
 
                     //MUESTRO
-                    String resu= TMB + " Kcal/day";
+                    String resu = TMB + " Kcal/" + getString(R.string.day_text);
                     day.setText(resu);
 
                     // Luego de mostrar el resultado calculo el consumo con esfuerzo fisico
 
                     if (low.isChecked()) {
                         //bajo
-                        fisico=TMB*(1.4);
+                        fisico = TMB*(1.4);
                     }
                     if (average.isChecked()) {
                         //medio
-                        fisico= TMB * (1.6);
+                        fisico = TMB * (1.6);
                     }
                     if (high.isChecked()) {
                         //alto
-                        fisico= TMB * (2.2);
+                        fisico = TMB * (2.2);
                     }
 
                     DecimalFormat df = new DecimalFormat("#.00");
-                    String resulF=String.valueOf(df.format(fisico))+ " kcal/day according to their physical activity";
+                    String resulF = df.format(fisico) + " kcal/" + getString(R.string.day_physical_text);
                     dayact.setText(resulF);
-
-
                 }
-
-
-
-
-
-
-
             }
-
-
-
         }
-
-
 }
 
     public void callclean (View view) {
-
         clean();
-
     }
 
     public void clean () {

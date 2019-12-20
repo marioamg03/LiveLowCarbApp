@@ -186,16 +186,16 @@ public class home1 extends Fragment {
                                 resulBased = getString(R.string.based_on_text_title) + " 3.5oz (100.0Gr)";
                                 basedt.setText(resulBased);
 
-                                resulCarbs = String.valueOf(df.format(Carbohidratos)) + " oz";
+                                resulCarbs = df.format(Carbohidratos) + " oz";
                                 carbt.setText(resulCarbs);
 
-                                resulProtein =String.valueOf(df.format(Proteinas)) + " oz";
+                                resulProtein = df.format(Proteinas) + " oz";
                                 proteint.setText(resulProtein);
 
-                                resulFat = String.valueOf(df.format(Grasas)) + " oz";
+                                resulFat = df.format(Grasas) + " oz";
                                 fatt.setText(resulFat);
 
-                                resulCalori = String.valueOf(df.format(Calorias)) + " Kcal";
+                                resulCalori = df.format(Calorias) + " Kcal";
                                 caloriet.setText(resulCalori);
                             }
                             else
@@ -203,16 +203,16 @@ public class home1 extends Fragment {
                                 resulBased = getString(R.string.based_on_text_title) + " 3.5oz (100.0Gr)";
                                 basedt.setText(resulBased);
 
-                                resulCarbs = String.valueOf(df.format(Carbohidratos / 28.35)) + " oz";
+                                resulCarbs = df.format(Carbohidratos / 28.35) + " oz";
                                 carbt.setText(resulCarbs);
 
-                                resulProtein = String.valueOf(df.format(Proteinas / 28.35)) + " oz";
+                                resulProtein = df.format(Proteinas / 28.35) + " oz";
                                 proteint.setText(resulProtein);
 
-                                resulFat = String.valueOf(df.format(Grasas / 28.35)) + " oz";
+                                resulFat = df.format(Grasas / 28.35) + " oz";
                                 fatt.setText(resulFat);
 
-                                resulCalori = String.valueOf(df.format( Calorias)) + " Kcal";
+                                resulCalori = df.format( Calorias) + " Kcal";
                                 caloriet.setText(resulCalori);
 
                                 gr = false;
@@ -237,36 +237,36 @@ public class home1 extends Fragment {
                     {
                         if (gr)
                         {
-                            resulBased = getString(R.string.based_on_text_title) + "100.0Gr (3.5oz)";
+                            resulBased = getString(R.string.based_on_text_title) + " 100.0Gr (3.5oz)";
                             basedt.setText(resulBased);
 
-                            resulCarbs = String.valueOf(df.format(Carbohidratos)) + " Gr";
+                            resulCarbs = df.format(Carbohidratos) + " Gr";
                             carbt.setText(resulCarbs);
 
-                            resulProtein =String.valueOf(df.format(Proteinas)) + " Gr";
+                            resulProtein = df.format(Proteinas) + " Gr";
                             proteint.setText(resulProtein);
 
-                            resulFat = String.valueOf(df.format(Grasas)) + " Gr";
+                            resulFat = df.format(Grasas) + " Gr";
                             fatt.setText(resulFat);
 
-                            resulCalori = String.valueOf(df.format(Calorias)) + " Kcal";
+                            resulCalori = df.format(Calorias) + " Kcal";
                             caloriet.setText(resulCalori);
                         }
                         else
                         {
-                            resulBased = getString(R.string.based_on_text_title) + "100.0Gr (3.5oz)";
+                            resulBased = getString(R.string.based_on_text_title) + " 100.0Gr (3.5oz)";
                             basedt.setText(resulBased);
 
-                            resulCarbs = String.valueOf(df.format(Carbohidratos)) + " Gr";
+                            resulCarbs = df.format(Carbohidratos) + " Gr";
                             carbt.setText(resulCarbs);
 
-                            resulProtein =String.valueOf(df.format(Proteinas)) + " Gr";
+                            resulProtein = df.format(Proteinas) + " Gr";
                             proteint.setText(resulProtein);
 
-                            resulFat = String.valueOf(df.format(Grasas)) + " Gr";
+                            resulFat = df.format(Grasas) + " Gr";
                             fatt.setText(resulFat);
 
-                            resulCalori = String.valueOf(df.format(Calorias)) + " Kcal";
+                            resulCalori = df.format(Calorias) + " Kcal";
                             caloriet.setText(resulCalori);
 
                             gr = true;
@@ -311,26 +311,25 @@ public class home1 extends Fragment {
                 if (Escaneo.toLowerCase().equals(comida.toLowerCase()))
                 {
                     seekBar.setVisibility(View.VISIBLE);
-                    if (!toggle.isChecked())
-                    {
+                    if (!toggle.isChecked()) {
                         foodt.setText(food[i]);
 
-                        resulCarbs = String.valueOf(df.format(Carbs[i])) + " Gr";
+                        resulCarbs = df.format(Carbs[i]) + " Gr";
                         carbt.setText(resulCarbs);
                         car = Carbs[i];
                         Carbohidratos = car;
 
-                        resulProtein = String.valueOf(df.format(Protein[i])) + " Gr";
+                        resulProtein = df.format(Protein[i]) + " Gr";
                         proteint.setText(resulProtein);
                         Pro = Protein[i];
                         Proteinas = Pro;
 
-                        resulFat = String.valueOf(df.format(fat[i])) + " Gr";
+                        resulFat = df.format(fat[i]) + " Gr";
                         fatt.setText(resulFat);
                         Fa = fat[i];
                         Grasas = Fa;
 
-                        resulCalori = String.valueOf(df.format(calories[i])) + " Kcal";
+                        resulCalori = df.format(calories[i]) + " Kcal";
                         caloriet.setText(resulCalori);
                         Cal = calories[i];
                         Calorias = Cal;
@@ -355,32 +354,29 @@ public class home1 extends Fragment {
                     //        malo();
                       //  }
 
-                    }
-                    else
-                    {
-                        if (toggle.isChecked())
-                        {
+                    } else {
+                        if (toggle.isChecked()) {
                             foodt.setText(food[i]);
 
 
-                            resulCarbs= String.valueOf(df.format(Carbs[i] / 28.35)) + " oz";
+                            resulCarbs = df.format(Carbs[i] / 28.35) + " oz";
                             carbt.setText(resulCarbs);
                             car = Carbs[i];
                             Carbohidratos = car;
 
 
-                            resulProtein = String.valueOf(df.format(Protein[i] / 28.35)) + " oz";
+                            resulProtein = df.format(Protein[i] / 28.35) + " oz";
                             proteint.setText(resulProtein);
                             Pro = Protein[i];
                             Proteinas = Pro;
 
 
-                            resulFat = String.valueOf(df.format(fat[i] / 28.35)) + " oz";
+                            resulFat = df.format(fat[i] / 28.35) + " oz";
                             fatt.setText(resulFat);
                             Fa = fat[i];
                             Grasas = Fa;
 
-                            resulCalori = String.valueOf(df.format(calories[i])) + " Kcal";
+                            resulCalori = df.format(calories[i]) + " Kcal";
                             caloriet.setText(resulCalori);
                             Cal = calories[i];
                             Calorias = Cal;
@@ -407,9 +403,7 @@ public class home1 extends Fragment {
 
                         }
                     }
-                }
-                else
-                {
+                } else {
                     foodt.setText(getString(R.string.food_not_found_text));
                     carbt.setText("");
                     proteint.setText("");

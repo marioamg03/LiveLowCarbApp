@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">LiveLowCarbApp</string>
+
+    <string name="based_on_text">Basado en 100.0Gr (3.5oz)</string>
+    <string name="food_text">Comida</string>
+    <string name="carbs_text">Carbohidratos</string>
+    <string name="protein_text">Proteína</string>
+    <string name="fat_text">Grasa</string>
+    <string name="calories_text">Calorías</string>
+    <string name="notation_value">GR</string>
+    <string name="gadgets_text">Artilugios</string>
+    <string name="bmr_text_title">TMB</string>
+    <string name="bmr_text">La tasa metabólica basal o TMB para abreviar, es un sistema utilizado para calcular cuál es el requerimiento mínimo de energía para que un ser humano se mantenga con vida.</string>
+    <string name="whr_text_title">ICC</string>
+    <string name="whr_text">El índice de radio de cintura / cadera (ICC) es lo que obtuvo al dividir la circunferencia de la cintura de una persona por el perímetro de su cadera.</string>
+    <string name="bmi_text_title">IMC</string>
+    <string name="bmi_text">El índice de masa corporal (IMC) es una medida de asociación entre la masa y el tamaño de un individuo.</string>
+    <string name="mass_text_title">Masa</string>
+    <string name="kg">Kg</string>
+    <string name="heigth_text_title">Altura</string>
+    <string name="cm">cm</string>
+    <string name="calculate_text_button">Calcular</string>
+    <string name="clean_text_button">Limpiar</string>
+    <string name="female_sex_title">Mujer</string>
+    <string name="men_sex_title">Hombre</string>
+    <string name="weigth_text_title">Peso</string>
+    <string name="age_text_title">Edad</string>
+    <string name="low_text_select">Baja</string>
+    <string name="average_test_select">Promedio</string>
+    <string name="high_text_select">Alta</string>
+    <string name="waist_text_title">Cintura</string>
+    <string name="hip_text_title">Cadera</string>
+    <string name="based_on_text_title">Basado en </string>
+    <string name="please_fill_text">Por favor llene los campos</string>
+    <string name="food_not_found_text">La comida no está en nuestra base de datos.</string>
+    <string name="severe_thinness_text">Delgadez severa</string>
+    <string name="thinness_text">Delgadez</string>
+    <string name="normal_text">Normal</string>
+    <string name="overweight_text">Exceso de peso</string>
+    <string name="obesity_text">Obesidad</string>
+    <string name="morbid_obesity_text">Obesidad mórbida</string>
+    <string name="enter_your_gender">Ingrese su género</string>
+    <string name="day_text">día</string>
+    <string name="day_physical_text">día según su actividad física</string>
+    <string name="enter_your_physical_text">Ingrese su esfuerzo físico</string>
+    <string name="whr_standard_text">Dentro del cuerpo estándar</string>
+    <string name="whr_pear_text">Cuerpo de pera</string>
+    <string name="whr_apple_text">Cuerpo de manzana</string>
+
+</resources>

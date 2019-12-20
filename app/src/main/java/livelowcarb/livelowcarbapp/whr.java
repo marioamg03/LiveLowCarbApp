@@ -1,4 +1,5 @@
 package livelowcarb.livelowcarbapp;
+
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
@@ -24,16 +25,16 @@ public class whr extends AppCompatActivity {
         setContentView(R.layout.whr);
         // Created variables for the app whr
 
-        waist=(EditText)findViewById(R.id.waist);
-        hip=(EditText)findViewById(R.id.hip);
+        waist = findViewById(R.id.waist);
+        hip = findViewById(R.id.hip);
 
-        result_whr=(TextView)findViewById(R.id.result_whr);
-        body=(TextView)findViewById(R.id.body);
+        result_whr = findViewById(R.id.result_whr);
+        body = findViewById(R.id.body);
 
-        female=(RadioButton)findViewById(R.id.female);
-        men=(RadioButton)findViewById(R.id.men);
+        female = findViewById(R.id.female);
+        men = findViewById(R.id.men);
 
-        image=(ImageView)findViewById(R.id.image);
+        image = findViewById(R.id.image);
 
         clean();
     }
@@ -45,9 +46,9 @@ public class whr extends AppCompatActivity {
         String valor1 = waist.getText().toString();
         String valor2 = hip.getText().toString();
 
-        if (female.isChecked()==false && men.isChecked()==false) {
+        if (!female.isChecked() && !men.isChecked()) {
 
-            Toast notificacion = Toast.makeText(this,"Enter Your Gender", Toast.LENGTH_LONG);
+            Toast notificacion = Toast.makeText(this, getString(R.string.enter_your_gender), Toast.LENGTH_LONG);
             notificacion.show();
 
         }
@@ -58,13 +59,12 @@ public class whr extends AppCompatActivity {
             //Chequeo los campos.
             if (valor1.equals("") || valor2.equals("")) {
 
-                Toast notificacion = Toast.makeText(this,"Please Fill The Fields", Toast.LENGTH_LONG);
+                Toast notificacion = Toast.makeText(this, getString(R.string.please_fill_text), Toast.LENGTH_LONG);
                 notificacion.show();
 
             }
 
-            else
-            {
+            else {
                 //asigno valor numerico a los campos
                 double waist=Double.parseDouble(valor1);
                 double hip=Double.parseDouble(valor2);
@@ -74,48 +74,48 @@ public class whr extends AppCompatActivity {
                 double WHR = waist/hip;
 
                     DecimalFormat df = new DecimalFormat("#0.00");
-                    String resulF=String.valueOf(df.format(WHR))+ " WHR";
+                    String resulF = df.format(WHR) + " " + getString(R.string.whr_text_title);
                     result_whr.setText(resulF);
 
-                if (men.isChecked() == true) {
+                if (men.isChecked()) {
                     //// HOMBRE
                     if (WHR >= 0.71 && WHR <= 0.84) {
-                        body.setText("Within the standard body");
-                        image.setVisibility(view.INVISIBLE);
+                        body.setText(getString(R.string.whr_standard_text));
+                        image.setVisibility(View.INVISIBLE);
                     }
                     if (WHR < 0.71) {
-                        body.setText("Pear body");
+                        body.setText(getString(R.string.whr_pear_text));
                         image.setImageResource(R.drawable.pera);
-                        image.setVisibility(view.VISIBLE);
+                        image.setVisibility(View.VISIBLE);
                     }
                     if (WHR > 0.84) {
-                        body.setText("Apple body");
+                        body.setText(getString(R.string.whr_apple_text));
                         image.setImageResource(R.drawable.manzana);
-                        image.setVisibility(view.VISIBLE);
+                        image.setVisibility(View.VISIBLE);
                     }
                 }
 
-                if (female.isChecked() == true) {
+                if (female.isChecked()) {
                     //// MUJER
                     if (WHR >= 0.78 && WHR <= 0.94) {
-                        body.setText("Within the standard body");
-                        image.setVisibility(view.INVISIBLE);
+                        body.setText(getString(R.string.whr_standard_text));
+                        image.setVisibility(View.INVISIBLE);
                     }
                     if (WHR < 0.78) {
-                        body.setText("Pear body");
+                        body.setText(getString(R.string.whr_pear_text));
                         image.setImageResource(R.drawable.pera);
-                        image.setVisibility(view.VISIBLE);
+                        image.setVisibility(View.VISIBLE);
                     }
                     if (WHR > 0.94) {
-                        body.setText("Apple body");
+                        body.setText(getString(R.string.whr_apple_text));
                         image.setImageResource(R.drawable.manzana);
-                        image.setVisibility(view.VISIBLE);
+                        image.setVisibility(View.VISIBLE);
                     }
                 }
 
-                }
             }
         }
+    }
 
     public void callclean (View view) {
 
@@ -133,4 +133,4 @@ public class whr extends AppCompatActivity {
         men.setChecked(false);
         image.setVisibility(View.INVISIBLE);
     }
-    }
+}
