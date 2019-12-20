@@ -1,6 +1,5 @@
 package livelowcarb.livelowcarbapp;
 
-import android.content.Intent;
 import androidx.fragment.app.Fragment;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -9,17 +8,11 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.CompoundButton;
-import android.widget.EditText;
 import android.widget.SeekBar;
 import android.widget.Switch;
 import android.widget.TextView;
-import android.widget.Toast;
-import android.widget.ToggleButton;
-
-
 
 import java.text.DecimalFormat;
-import java.util.Objects;
 
 public class home1 extends Fragment {
 
@@ -76,7 +69,7 @@ public class home1 extends Fragment {
 
         });
 
-        seekBar = (SeekBar) rootView.findViewById(R.id.seekBar);
+        seekBar = rootView.findViewById(R.id.seekBar);
 
         seekBar.setProgress(90);
 
@@ -93,43 +86,43 @@ public class home1 extends Fragment {
 
                 if (!toggle.isChecked()) {
 
-                    resulBased = "Based on " + String.valueOf(Unidad)+"Gr (" + String.valueOf(df.format(Unidad * 0.035)) + "oz)";
+                    resulBased = getString(R.string.based_on_text_title) + Unidad +"Gr (" + df.format(Unidad * 0.035) + "oz)";
                     basedt.setText(resulBased);
 
-                    resulCarbs = String.valueOf(df.format(Carbohidratos * Unidad/100))+ " Gr";
+                    resulCarbs = df.format(Carbohidratos * Unidad/100)+ " Gr";
                     carbt.setText(resulCarbs);
 
 
-                    resulProtein = String.valueOf(df.format(Proteinas * Unidad/100))+ " Gr";
+                    resulProtein = df.format(Proteinas * Unidad/100)+ " Gr";
                     proteint.setText(resulProtein);
 
 
-                    resulFat = String.valueOf(df.format(Grasas * Unidad/100))+ " Gr";
+                    resulFat = df.format(Grasas * Unidad/100)+ " Gr";
                     fatt.setText(resulFat);
 
 
-                    resulCalori = String.valueOf(df.format(Calorias * Unidad/100))+ " Kcal";
+                    resulCalori = df.format(Calorias * Unidad/100)+ " Kcal";
                     caloriet.setText(resulCalori);
 
                 }
                 else{
 
-                    resulBased = "Based on " + String.valueOf(df.format(Unidad * 0.035)) + "oz (" + String.valueOf(Unidad) + "Gr)";
+                    resulBased = getString(R.string.based_on_text_title) + df.format(Unidad * 0.035) + "oz (" + Unidad + "Gr)";
                     basedt.setText(resulBased);
 
-                    resulCarbs = String.valueOf(df.format(Carbohidratos * Unidad * 0.035 / 100))+ " oz";
+                    resulCarbs = df.format(Carbohidratos * Unidad * 0.035 / 100) + " oz";
                     carbt.setText(resulCarbs);
 
 
-                    resulProtein = String.valueOf(df.format(Proteinas * Unidad * 0.035 / 100))+ " oz";
+                    resulProtein = df.format(Proteinas * Unidad * 0.035 / 100) + " oz";
                     proteint.setText(resulProtein);
 
 
-                    resulFat = String.valueOf(df.format(Grasas * Unidad * 0.035 / 100))+ " oz";
+                    resulFat = df.format(Grasas * Unidad * 0.035 / 100) + " oz";
                     fatt.setText(resulFat);
 
 
-                    resulCalori = String.valueOf(df.format(Calorias * Unidad * 0.035 / 100))+ " Kcal";
+                    resulCalori = df.format(Calorias * Unidad * 0.035 / 100) + " Kcal";
                     caloriet.setText(resulCalori);
 
                 }
@@ -156,17 +149,17 @@ public class home1 extends Fragment {
         llenado();
         llenadoA();
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(getActivity(), android.R.layout.simple_dropdown_item_1line, Alimentos);
-        Comida_a_buscar =(AutoCompleteTextView)view.findViewById(R.id.autoCompleteTextView);
+        Comida_a_buscar = view.findViewById(R.id.autoCompleteTextView);
         Comida_a_buscar.setAdapter(adapter);
 
-        foodt = (TextView) view.findViewById(R.id.food);
-        carbt = (TextView) view.findViewById(R.id.carb);
-        proteint = (TextView) view.findViewById(R.id.protein);
-        fatt = (TextView) view.findViewById(R.id.fat);
-        caloriet = (TextView) view.findViewById(R.id.calorie);
-        basedt = (TextView) view.findViewById(R.id.Basado);
+        foodt = view.findViewById(R.id.food);
+        carbt = view.findViewById(R.id.carb);
+        proteint = view.findViewById(R.id.protein);
+        fatt = view.findViewById(R.id.fat);
+        caloriet = view.findViewById(R.id.calorie);
+        basedt = view.findViewById(R.id.Basado);
 
-        toggle = (Switch) view.findViewById(R.id.switch1);
+        toggle = view.findViewById(R.id.switch1);
 
         toggle.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
 
@@ -190,7 +183,7 @@ public class home1 extends Fragment {
 
                         if (!gr)
                             {
-                                resulBased = "Based on 3.5oz (100.0Gr)";
+                                resulBased = getString(R.string.based_on_text_title) + " 3.5oz (100.0Gr)";
                                 basedt.setText(resulBased);
 
                                 resulCarbs = String.valueOf(df.format(Carbohidratos)) + " oz";
@@ -207,7 +200,7 @@ public class home1 extends Fragment {
                             }
                             else
                             {
-                                resulBased = "Based on 3.5oz (100.0Gr)";
+                                resulBased = getString(R.string.based_on_text_title) + " 3.5oz (100.0Gr)";
                                 basedt.setText(resulBased);
 
                                 resulCarbs = String.valueOf(df.format(Carbohidratos / 28.35)) + " oz";
@@ -244,7 +237,7 @@ public class home1 extends Fragment {
                     {
                         if (gr)
                         {
-                            resulBased = "Based on 100.0Gr (3.5oz)";
+                            resulBased = getString(R.string.based_on_text_title) + "100.0Gr (3.5oz)";
                             basedt.setText(resulBased);
 
                             resulCarbs = String.valueOf(df.format(Carbohidratos)) + " Gr";
@@ -261,7 +254,7 @@ public class home1 extends Fragment {
                         }
                         else
                         {
-                            resulBased = "Based on 100.0Gr (3.5oz)";
+                            resulBased = getString(R.string.based_on_text_title) + "100.0Gr (3.5oz)";
                             basedt.setText(resulBased);
 
                             resulCarbs = String.valueOf(df.format(Carbohidratos)) + " Gr";
@@ -299,7 +292,7 @@ public class home1 extends Fragment {
 
         if (comida.equals(""))
         {
-            foodt.setText("Please Fill the Fields");
+            foodt.setText(getString(R.string.please_fill_text));
             carbt.setText("");
             proteint.setText("");
             fatt.setText("");
@@ -417,7 +410,7 @@ public class home1 extends Fragment {
                 }
                 else
                 {
-                    foodt.setText("The food is not in our database");
+                    foodt.setText(getString(R.string.food_not_found_text));
                     carbt.setText("");
                     proteint.setText("");
                     fatt.setText("");

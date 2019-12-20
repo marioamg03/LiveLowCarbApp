@@ -25,14 +25,14 @@ public class bmi extends AppCompatActivity {
 
         // Created variables for the app whr
 
-        mass=(EditText)findViewById(R.id.mass);
-        heigth=(EditText)findViewById(R.id.heigth);
+        mass= findViewById(R.id.mass);
+        heigth= findViewById(R.id.heigth);
 
-        result_bmi=(TextView)findViewById(R.id.result_bmi);
-        body=(TextView)findViewById(R.id.body);
+        result_bmi= findViewById(R.id.result_bmi);
+        body= findViewById(R.id.body);
 
 
-        image=(ImageView)findViewById(R.id.image);
+        image= findViewById(R.id.image);
 
         clean();
     }
@@ -46,7 +46,7 @@ public class bmi extends AppCompatActivity {
 
         if (valor1.equals("") || valor2.equals("")) {
 
-            Toast notificacion = Toast.makeText(this,"Please Fill The Fields", Toast.LENGTH_LONG);
+            Toast notificacion = Toast.makeText(this,getString(R.string.please_fill_text), Toast.LENGTH_LONG);
             notificacion.show();
 
         }
@@ -61,46 +61,40 @@ public class bmi extends AppCompatActivity {
             double BMI = ((mass / ((heigth*heigth)/100)) * 100);
 
             DecimalFormat df = new DecimalFormat("#0.00");
-            String resulF=String.valueOf(df.format(BMI))+ " Kg/m²";
+            String resulF= df.format(BMI)+ " Kg/m²";
             result_bmi.setText(resulF);
 
             if (BMI <= 15.99)
             {
-                body.setText("Severe thinness");
+                body.setText(getString(R.string.severe_thinness_text));
                 image.setImageResource(R.drawable.flaquito);
-                image.setVisibility(view.VISIBLE);
             }
             if (BMI >= 16 && BMI <= 18.49)
             {
-                body.setText("Thinness");
+                body.setText(getString(R.string.thinness_text));
                 image.setImageResource(R.drawable.flaco);
-                image.setVisibility(view.VISIBLE);
             }
             if (BMI > 18.49 && BMI <= 24.99)
             {
-                body.setText("Normal");
+                body.setText(getString(R.string.normal_text));
                 image.setImageResource(R.drawable.pesoideal);
-                image.setVisibility(view.VISIBLE);
             }
             if (BMI >= 25 && BMI <= 29.99)
             {
-                body.setText("Overweight");
+                body.setText(getString(R.string.overweight_text));
                 image.setImageResource(R.drawable.mediano);
-                image.setVisibility(view.VISIBLE);
             }
             if (BMI >= 30 && BMI <= 39.99)
             {
-                body.setText("Obesity");
+                body.setText(getString(R.string.obesity_text));
                 image.setImageResource(R.drawable.mediogordo);
-                image.setVisibility(view.VISIBLE);
-
             }
             if (BMI >= 40)
             {
-                body.setText("Morbid obesity");
+                body.setText(getString(R.string.morbid_obesity_text));
                 image.setImageResource(R.drawable.gordo);
-                image.setVisibility(view.VISIBLE);
             }
+            image.setVisibility(View.VISIBLE);
         }
 
 

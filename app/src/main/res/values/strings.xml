@@ -1,5 +1,44 @@
 <resources>
     <string name="app_name">LiveLowCarbApp</string>
-    <string name="action_settings">Settings</string>
-    <string name="section_format">Hello World from section: %1$d</string>
+
+    <string name="based_on_text">Based on 100.0Gr (3.5oz)</string>
+    <string name="food_text">Food</string>
+    <string name="carbs_text">Carbs</string>
+    <string name="protein_text">Protein</string>
+    <string name="fat_text">Fat</string>
+    <string name="calories_text">Calories</string>
+    <string name="notation_value">GR</string>
+    <string name="gadgets_text">Gadgets</string>
+    <string name="bmr_text_title">BMR</string>
+    <string name="bmr_text">Basal metabolic rate or BMR for short, is a system used to calculate which is the minimum energy requirement for a human being to stay alive.</string>
+    <string name="whr_text_title">WHR</string>
+    <string name="whr_text">The waist / hip radio (WHR) index is what you obtained by dividing the waist circunference of a person by the perimeter of your hip.</string>
+    <string name="bmi_text_title">BMI</string>
+    <string name="bmi_text">The body mass index (BMI) is a measure of association between the mass and size of an individual.</string>
+    <string name="mass_text_title">Mass</string>
+    <string name="kg">Kg</string>
+    <string name="heigth_text_title">Heigth</string>
+    <string name="cm">cm</string>
+    <string name="calculate_text_button">Calculate</string>
+    <string name="clean_text_button">Clean</string>
+    <string name="female_sex_title">Female</string>
+    <string name="men_sex_title">Men</string>
+    <string name="weigth_text_title">Weigth</string>
+    <string name="age_text_title">Age</string>
+    <string name="low_text_select">Low</string>
+    <string name="average_test_select">Average</string>
+    <string name="high_text_select">High</string>
+    <string name="waist_text_title">Waist</string>
+    <string name="hip_text_title">Hip</string>
+    <string name="based_on_text_title">Based on</string>
+    <string name="please_fill_text">Please Fill the Fields</string>
+    <string name="food_not_found_text">The food is not in our database</string>
+    <string name="severe_thinness_text">Severe thinness</string>
+    <string name="thinness_text">Thinness</string>
+    <string name="normal_text">Normal</string>
+    <string name="overweight_text">Overweight</string>
+    <string name="obesity_text">Obesity</string>
+    <string name="morbid_obesity_text">Morbid obesity</string>
+    <string name="enter_your_gender">Enter Your Gender</string>
+
 </resources>

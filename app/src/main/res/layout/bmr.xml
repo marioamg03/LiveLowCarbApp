@@ -59,7 +59,7 @@
                     android:id="@+id/Genero">
 
                     <RadioButton
-                        android:text="Female"
+                        android:text="@string/female_sex_title"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:id="@+id/female"
@@ -67,10 +67,10 @@
                         android:textStyle="normal|bold"
                         android:textSize="24sp"
                         android:checked="false"
-                        android:layout_marginRight="25dp" />
+                        android:layout_marginEnd="25dp" />
 
                     <RadioButton
-                        android:text="Men"
+                        android:text="@string/men_sex_title"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:id="@+id/men"
@@ -89,7 +89,7 @@
                     android:layout_marginTop="10dp">
 
                     <TextView
-                        android:text="Weigth"
+                        android:text="@string/weigth_text_title"
                         android:layout_width="wrap_content"
                         android:id="@+id/textView10"
                         android:layout_weight="0.32"
@@ -111,14 +111,14 @@
                         android:background="@android:color/background_light"
                         android:textColorLink="?attr/colorPrimary"
                         android:textColor="?attr/actionMenuTextColor"
-                        android:layout_marginLeft="15dp"
+                        android:layout_marginStart="15dp"
                         android:textStyle="normal|bold"
                         android:paddingLeft="10dp"
                         android:paddingRight="10dp"
                         android:textAlignment="center" />
 
                     <TextView
-                        android:text="Kg"
+                        android:text="@string/kg"
                         android:layout_width="wrap_content"
                         android:id="@+id/textView9"
                         android:layout_height="match_parent"
@@ -138,7 +138,7 @@
                     android:layout_marginTop="10dp">
 
                     <TextView
-                        android:text="Heigth"
+                        android:text="@string/heigth_text_title"
                         android:layout_width="wrap_content"
                         android:id="@+id/textView11"
                         android:layout_weight="0.32"
@@ -160,14 +160,14 @@
                         android:background="@android:color/background_light"
                         android:textColorLink="?attr/colorPrimary"
                         android:textColor="?attr/actionMenuTextColor"
-                        android:layout_marginLeft="20dp"
+                        android:layout_marginStart="20dp"
                         android:textStyle="normal|bold"
                         android:paddingLeft="10dp"
                         android:paddingRight="10dp"
                         android:textAlignment="center" />
 
                     <TextView
-                        android:text="cm"
+                        android:text="@string/cm"
                         android:layout_width="wrap_content"
                         android:id="@+id/textView13"
                         android:layout_height="match_parent"
@@ -187,7 +187,7 @@
                     android:layout_marginTop="10dp">
 
                     <TextView
-                        android:text="Age"
+                        android:text="@string/age_text_title"
                         android:id="@+id/textView12"
                         android:layout_weight="0.32"
                         android:textSize="24sp"
@@ -197,7 +197,7 @@
                         android:gravity="center"
                         android:layout_height="52dp"
                         android:layout_width="90dp"
-                        android:paddingRight="32dp" />
+                        android:paddingEnd="32dp" />
 
                     <EditText
                         android:maxLength="3"
@@ -211,7 +211,7 @@
                         android:background="@android:color/background_light"
                         android:textColorLink="?attr/colorPrimary"
                         android:textColor="?attr/actionMenuTextColor"
-                        android:layout_marginRight="39dp"
+                        android:layout_marginEnd="39dp"
                         android:textStyle="normal|bold"
                         android:paddingLeft="10dp"
                         android:paddingRight="10dp"
@@ -229,27 +229,27 @@
                     android:gravity="center_horizontal">
 
                     <RadioButton
-                        android:text="Low"
+                        android:text="@string/low_text_select"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:id="@+id/low"
                         android:textStyle="normal|bold"
                         android:textSize="20sp"
                         android:textColor="@android:color/background_light"
-                        android:layout_marginRight="15dp" />
+                        android:layout_marginEnd="15dp" />
 
                     <RadioButton
-                        android:text="Average"
+                        android:text="@string/average_test_select"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:id="@+id/average"
                         android:textStyle="normal|bold"
                         android:textSize="20sp"
                         android:textColor="@android:color/background_light"
-                        android:layout_marginRight="15dp" />
+                        android:layout_marginEnd="15dp" />
 
                     <RadioButton
-                        android:text="High"
+                        android:text="@string/high_text_select"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:id="@+id/high"
@@ -267,7 +267,7 @@
 
 
                     <Button
-                        android:text="Calculate"
+                        android:text="@string/calculate_text_button"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:id="@+id/calculate"
@@ -279,7 +279,7 @@
                         android:onClick="bmrcalculate" />
 
                     <Button
-                        android:text="Clean"
+                        android:text="@string/clean_text_button"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:id="@+id/clean"

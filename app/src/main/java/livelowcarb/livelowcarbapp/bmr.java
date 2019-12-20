@@ -23,18 +23,18 @@ public class bmr extends AppCompatActivity {
 
         // Created variables for the app bmr1
 
-        weigth=(EditText)findViewById(R.id.weigth);
-        heigth=(EditText)findViewById(R.id.heigth);
-        age=(EditText)findViewById(R.id.age);
+        weigth = findViewById(R.id.weigth);
+        heigth = findViewById(R.id.heigth);
+        age = findViewById(R.id.age);
 
-        day=(TextView)findViewById(R.id.day);
-        dayact=(TextView)findViewById(R.id.dayact);
+        day = findViewById(R.id.day);
+        dayact = findViewById(R.id.dayact);
 
-        female=(RadioButton)findViewById(R.id.female);
-        men=(RadioButton)findViewById(R.id.men);
-        low=(RadioButton)findViewById(R.id.low);
-        average=(RadioButton)findViewById(R.id.average);
-        high=(RadioButton)findViewById(R.id.high);
+        female = findViewById(R.id.female);
+        men = findViewById(R.id.men);
+        low = findViewById(R.id.low);
+        average = findViewById(R.id.average);
+        high = findViewById(R.id.high);
 
         clean();
     }
@@ -50,9 +50,9 @@ public class bmr extends AppCompatActivity {
 
 
         //Verifico la seleccion de genero.
-        if (female.isChecked()==false && men.isChecked()==false) {
+        if (!female.isChecked() && !men.isChecked()) {
 
-            Toast notificacion = Toast.makeText(this,"Enter Your Gender", Toast.LENGTH_LONG);
+            Toast notificacion = Toast.makeText(this, getString(R.string.enter_your_gender), Toast.LENGTH_LONG);
             notificacion.show();
 
         }
@@ -63,7 +63,7 @@ public class bmr extends AppCompatActivity {
             //Chequeo los campos.
             if (valor1.equals("") || valor2.equals("") || valor3.equals(""))
             {
-                Toast notificacion = Toast.makeText(this,"Please Fill The Fields", Toast.LENGTH_LONG);
+                Toast notificacion = Toast.makeText(this, getString(R.string.please_fill_text), Toast.LENGTH_LONG);
                 notificacion.show();
             }
             //Si los campos tienen valores les asigno valores.
@@ -81,7 +81,7 @@ public class bmr extends AppCompatActivity {
 
 
                 // Y verifico el esfuerzo fisico
-                if (low.isChecked()==false && average.isChecked()==false && high.isChecked()==false) {
+                if (!low.isChecked() && !average.isChecked() && !high.isChecked()) {
 
                     Toast notificacion = Toast.makeText(this,"Enter Your Physical Effort", Toast.LENGTH_LONG);
                     notificacion.show();
@@ -90,31 +90,31 @@ public class bmr extends AppCompatActivity {
 
                     //Calculo el consumo de anergia diario sin esfuerzo fisico y luego lo muestro.
 
-                    if (female.isChecked()==true) {
+                    if (female.isChecked()) {
                         // ES UNA MUJER
                         TMB = (10 * weigth) + (6.25 * heigth) - (5 * age) + 5;
                     }
 
-                    if (men.isChecked()==true) {
+                    if (men.isChecked()) {
                         // ES UN HOMBRE
                         TMB = (10 * weigth) + (6.25 * heigth) - (5 * age) - 161;
                     }
 
                     //MUESTRO
-                    String resu=String.valueOf(TMB)+ " Kcal/day";
+                    String resu= TMB + " Kcal/day";
                     day.setText(resu);
 
                     // Luego de mostrar el resultado calculo el consumo con esfuerzo fisico
 
-                    if (low.isChecked() == true) {
+                    if (low.isChecked()) {
                         //bajo
                         fisico=TMB*(1.4);
                     }
-                    if (average.isChecked() == true) {
+                    if (average.isChecked()) {
                         //medio
                         fisico= TMB * (1.6);
                     }
-                    if (high.isChecked() == true) {
+                    if (high.isChecked()) {
                         //alto
                         fisico= TMB * (2.2);
                     }

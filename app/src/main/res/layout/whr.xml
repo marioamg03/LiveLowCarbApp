@@ -58,7 +58,7 @@
                     android:gravity="center_horizontal">
 
                     <RadioButton
-                        android:text="Female"
+                        android:text="@string/female_sex_title"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:id="@+id/female"
@@ -66,10 +66,10 @@
                         android:textStyle="normal|bold"
                         android:textSize="24sp"
                         android:checked="false"
-                        android:layout_marginRight="25dp" />
+                        android:layout_marginEnd="25dp" />
 
                     <RadioButton
-                        android:text="Men"
+                        android:text="@string/men_sex_title"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:id="@+id/men"
@@ -88,7 +88,7 @@
                     android:layout_marginTop="10dp">
 
                     <TextView
-                        android:text="Waist"
+                        android:text="@string/waist_text_title"
                         android:layout_width="wrap_content"
                         android:id="@+id/textView10"
                         android:layout_weight="0.32"
@@ -110,14 +110,14 @@
                         android:background="@android:color/background_light"
                         android:textColorLink="?attr/colorPrimary"
                         android:textColor="?attr/actionMenuTextColor"
-                        android:layout_marginLeft="15dp"
+                        android:layout_marginStart="15dp"
                         android:textStyle="normal|bold"
                         android:textAlignment="center"
                         android:paddingRight="10dp"
                         android:paddingLeft="10dp" />
 
                     <TextView
-                        android:text="cm"
+                        android:text="@string/cm"
                         android:layout_width="wrap_content"
                         android:id="@+id/textView9"
                         android:layout_height="match_parent"
@@ -137,7 +137,7 @@
                     android:layout_marginTop="10dp">
 
                     <TextView
-                        android:text="Hip"
+                        android:text="@string/hip_text_title"
                         android:layout_width="wrap_content"
                         android:id="@+id/textView11"
                         android:layout_weight="0.32"
@@ -159,14 +159,14 @@
                         android:background="@android:color/background_light"
                         android:textColorLink="?attr/colorPrimary"
                         android:textColor="?attr/actionMenuTextColor"
-                        android:layout_marginLeft="20dp"
+                        android:layout_marginStart="20dp"
                         android:textStyle="normal|bold"
                         android:textAlignment="center"
                         android:paddingRight="10dp"
                         android:paddingLeft="10dp" />
 
                     <TextView
-                        android:text="cm"
+                        android:text="@string/cm"
                         android:layout_width="wrap_content"
                         android:id="@+id/textView13"
                         android:layout_height="match_parent"
@@ -186,7 +186,7 @@
 
 
                     <Button
-                        android:text="Calculate"
+                        android:text="@string/calculate_text_button"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:id="@+id/calculate"
@@ -198,7 +198,7 @@
                         android:onClick="whrcalculate" />
 
                     <Button
-                        android:text="Clean"
+                        android:text="@string/clean_text_button"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:id="@+id/clean"
