@@ -1,4 +1,4 @@
-package livelowcarb.livelowcarbapp;
+package livelowcarb.livelowcarbapp.ui.fragments;
 
 import android.os.Bundle;
 import android.view.View;
@@ -11,6 +11,8 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 import java.text.DecimalFormat;
+
+import livelowcarb.livelowcarbapp.R;
 
 public class whr extends AppCompatActivity {
 

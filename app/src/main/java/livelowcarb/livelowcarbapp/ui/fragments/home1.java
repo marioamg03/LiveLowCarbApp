@@ -1,7 +1,8 @@
-package livelowcarb.livelowcarbapp;
+package livelowcarb.livelowcarbapp.ui.fragments;
 
 import androidx.fragment.app.Fragment;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,7 +13,15 @@ import android.widget.SeekBar;
 import android.widget.Switch;
 import android.widget.TextView;
 
+import com.google.gson.Gson;
+
 import java.text.DecimalFormat;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Objects;
+
+import livelowcarb.livelowcarbapp.R;
+import livelowcarb.livelowcarbapp.data.FoodsModel;
 
 public class home1 extends Fragment {
 
@@ -33,7 +42,7 @@ public class home1 extends Fragment {
     double Protein [] = new double[5000];
 
     /// Formato decimal
-    DecimalFormat df = new DecimalFormat("#0.00");
+    private DecimalFormat df = new DecimalFormat("#0.00");
 
     //Variables que uso para juntar los strings de los textos
     String resulCarbs;
@@ -148,7 +157,8 @@ public class home1 extends Fragment {
 
         llenado();
         llenadoA();
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(getActivity(), android.R.layout.simple_dropdown_item_1line, Alimentos);
+        ArrayAdapter<String> adapter;
+        adapter = new ArrayAdapter<>(Objects.requireNonNull(getActivity()), android.R.layout.simple_dropdown_item_1line, Alimentos);
         Comida_a_buscar = view.findViewById(R.id.autoCompleteTextView);
         Comida_a_buscar.setAdapter(adapter);
 
@@ -422,10 +432,11 @@ public class home1 extends Fragment {
     }
 
 
-    private final String[] Alimentos = new String[270];
+    private final String[] Alimentos = new String[501];
 
     // Codigo de llenado de los vectores de comida
     public void llenado (){
+
         food[0] ="Abalone (Mixed Species)";
         calories[0] = 105;
         fat[0] = 0.76;
@@ -3462,9 +3473,28 @@ public class home1 extends Fragment {
     }
 
     public void llenadoA (){
-        for (int i = 0; i < 270; i++){
+
+        List<FoodsModel> foodsModelList = new ArrayList<>();
+
+
+        for (int i = 0; i < 501; i++){
             Alimentos[i] = food[i];
+
+            FoodsModel foodsModel = new FoodsModel();
+
+            foodsModel.setId(i);
+            foodsModel.setName(food[i]);
+            foodsModel.setCalories(calories[i]);
+            foodsModel.setFat(fat[i]);
+            foodsModel.setCarbs(Carbs[i]);
+            foodsModel.setProtein(Protein[i]);
+            foodsModelList.add(i,foodsModel);
         }
+
+        String json = new Gson().toJson(foodsModelList);
+
+        Log.e("COMIDA", json);
+
     }
 
 

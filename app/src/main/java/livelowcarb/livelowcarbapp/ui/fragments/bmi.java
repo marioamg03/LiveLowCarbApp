@@ -1,4 +1,4 @@
-package livelowcarb.livelowcarbapp;
+package livelowcarb.livelowcarbapp.ui.fragments;
 
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
@@ -11,6 +11,8 @@ import android.widget.Toast;
 
 
 import java.text.DecimalFormat;
+
+import livelowcarb.livelowcarbapp.R;
 
 public class bmi extends AppCompatActivity {
 

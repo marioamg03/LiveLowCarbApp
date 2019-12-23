@@ -1,4 +1,4 @@
-package livelowcarb.livelowcarbapp;
+package livelowcarb.livelowcarbapp.ui.activitys;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -14,6 +14,13 @@ import androidx.fragment.app.FragmentPagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
 import com.google.android.material.tabs.TabLayout;
+
+import livelowcarb.livelowcarbapp.R;
+import livelowcarb.livelowcarbapp.ui.fragments.bmi;
+import livelowcarb.livelowcarbapp.ui.fragments.bmr;
+import livelowcarb.livelowcarbapp.ui.fragments.home1;
+import livelowcarb.livelowcarbapp.ui.fragments.home2;
+import livelowcarb.livelowcarbapp.ui.fragments.whr;
 
 public class MainActivity extends AppCompatActivity {
 
