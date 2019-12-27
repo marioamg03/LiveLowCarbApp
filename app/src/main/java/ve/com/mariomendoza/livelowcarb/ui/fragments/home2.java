@@ -1,4 +1,4 @@
-package livelowcarb.livelowcarbapp.ui.fragments;
+package ve.com.mariomendoza.livelowcarb.ui.fragments;
 
 import android.os.Bundle;
 import androidx.fragment.app.Fragment;
@@ -6,7 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import livelowcarb.livelowcarbapp.R;
+import ve.com.mariomendoza.livelowcarb.R;
 
 
 public class home2 extends Fragment {

@@ -1,4 +1,4 @@
-package livelowcarb.livelowcarbapp.ui.fragments;
+package ve.com.mariomendoza.livelowcarb.ui.fragments;
 
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
@@ -10,7 +10,7 @@ import android.widget.Toast;
 
 import java.text.DecimalFormat;
 
-import livelowcarb.livelowcarbapp.R;
+import ve.com.mariomendoza.livelowcarb.R;
 
 public class bmr extends AppCompatActivity {
 

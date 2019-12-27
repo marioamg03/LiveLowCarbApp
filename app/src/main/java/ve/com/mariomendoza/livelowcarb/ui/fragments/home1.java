@@ -1,4 +1,4 @@
-package livelowcarb.livelowcarbapp.ui.fragments;
+package ve.com.mariomendoza.livelowcarb.ui.fragments;
 
 import androidx.fragment.app.Fragment;
 import android.os.Bundle;
@@ -20,8 +20,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
-import livelowcarb.livelowcarbapp.R;
-import livelowcarb.livelowcarbapp.data.FoodsModel;
+import ve.com.mariomendoza.livelowcarb.R;
+import ve.com.mariomendoza.livelowcarb.data.models.FoodsModel;
 
 public class home1 extends Fragment {
 

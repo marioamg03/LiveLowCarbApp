@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="livelowcarb.livelowcarbapp">
+    package="ve.com.mariomendoza.livelowcarb">
 
     <application
         android:allowBackup="true"
@@ -11,7 +11,7 @@
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
 
-        <activity android:name=".ui.activitys.MainActivity"
+        <activity android:name="ve.com.mariomendoza.livelowcarb.ui.activitys.MainActivity"
             android:screenOrientation="portrait"
             android:label="@string/app_name"
             android:theme="@style/SplashTheme">
@@ -27,21 +27,21 @@
         <!-- Configuracion  de los temas de las paginas de Gadgets -->
 
         <!-- Configuracion de la pagina BMR -->
-        <activity android:name=".ui.fragments.bmr"
+        <activity android:name="ve.com.mariomendoza.livelowcarb.ui.fragments.bmr"
             android:screenOrientation="portrait"
             android:label="@string/app_name"
             android:theme="@style/AppTheme">
         </activity>
 
         <!-- Configuracion de la pagina WHR -->
-        <activity android:name=".ui.fragments.whr"
+        <activity android:name="ve.com.mariomendoza.livelowcarb.ui.fragments.whr"
             android:screenOrientation="portrait"
             android:label="@string/app_name"
             android:theme="@style/AppTheme">
         </activity>
 
         <!-- Configuracion de la pagina BMI -->
-        <activity android:name=".ui.fragments.bmi"
+        <activity android:name="ve.com.mariomendoza.livelowcarb.ui.fragments.bmi"
             android:screenOrientation="portrait"
             android:label="@string/app_name"
             android:theme="@style/AppTheme">

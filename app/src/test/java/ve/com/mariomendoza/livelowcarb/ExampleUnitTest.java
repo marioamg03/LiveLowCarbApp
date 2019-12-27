@@ -1,4 +1,4 @@
-package livelowcarb.livelowcarbapp;
+package ve.com.mariomendoza.livelowcarb;
 
 import org.junit.Test;
 

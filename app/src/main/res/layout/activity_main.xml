@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context="livelowcarb.livelowcarbapp.ui.activitys.MainActivity">
+    tools:context="ve.com.mariomendoza.livelowcarb.ui.activitys.MainActivity">
 
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/appbar"

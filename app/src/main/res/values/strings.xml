@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">LiveLowCarbApp</string>
+    <string name="app_name">LiveLowCarb</string>
 
     <string name="based_on_text">Based on 100.0Gr (3.5oz)</string>
     <string name="food_text">Food</string>

@@ -1,4 +1,4 @@
-package livelowcarb.livelowcarbapp.data;
+package ve.com.mariomendoza.livelowcarb.data.models;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
