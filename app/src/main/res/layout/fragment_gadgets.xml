@@ -56,11 +56,10 @@
                     android:layout_height="wrap_content">
 
                     <ImageButton
+                        android:id="@+id/btn_go_to_bmr"
                         app:srcCompat="@drawable/imb"
-                        android:id="@+id/imageButton"
                         android:layout_height="122dp"
-                        android:layout_width="122dp"
-                        android:onClick="irbmr" />
+                        android:layout_width="122dp"/>
 
                     <!--Espacio en blanco entre las imagenes y el texto-->
                     <LinearLayout
@@ -107,11 +106,10 @@
                     android:layout_height="wrap_content">
 
                     <ImageButton
+                        android:id="@+id/btn_go_to_whr"
                         app:srcCompat="@drawable/icc"
-                        android:id="@+id/imageButton1"
                         android:layout_height="122dp"
-                        android:layout_width="122dp"
-                        android:onClick="irwhr" />
+                        android:layout_width="122dp"/>
 
                     <!--Espacio en blanco entre las imagenes y el texto-->
                     <LinearLayout
@@ -156,10 +154,9 @@
                     android:orientation="horizontal">
 
                     <ImageButton
-                        android:id="@+id/imageButton2"
+                        android:id="@+id/btn_go_to_bmi"
                         android:layout_width="122dp"
                         android:layout_height="122dp"
-                        android:onClick="irbmi"
                         app:srcCompat="@drawable/imc" />
 
                     <!--Espacio en blanco entre las imagenes y el texto-->

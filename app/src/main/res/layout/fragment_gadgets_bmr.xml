@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context="ve.com.mariomendoza.livelowcarb.ui.fragments.bmr"
+    tools:context=".ui.fragments.gadgetsfragment.bmr.Bmr"
     android:background="@color/colorAccent">
 
 

@@ -16,11 +16,11 @@ import androidx.viewpager.widget.ViewPager;
 import com.google.android.material.tabs.TabLayout;
 
 import ve.com.mariomendoza.livelowcarb.R;
-import ve.com.mariomendoza.livelowcarb.ui.fragments.bmi;
-import ve.com.mariomendoza.livelowcarb.ui.fragments.bmr;
-import ve.com.mariomendoza.livelowcarb.ui.fragments.home1;
-import ve.com.mariomendoza.livelowcarb.ui.fragments.home2;
-import ve.com.mariomendoza.livelowcarb.ui.fragments.whr;
+import ve.com.mariomendoza.livelowcarb.ui.fragments.gadgetsfragment.bmi.Bmi;
+import ve.com.mariomendoza.livelowcarb.ui.fragments.gadgetsfragment.bmr.Bmr;
+import ve.com.mariomendoza.livelowcarb.ui.fragments.foodsearchfragment.Foodsearch;
+import ve.com.mariomendoza.livelowcarb.ui.fragments.gadgetsfragment.Gadgets;
+import ve.com.mariomendoza.livelowcarb.ui.fragments.gadgetsfragment.whr.Whr;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -84,11 +84,11 @@ public class MainActivity extends AppCompatActivity {
         public Fragment getItem(int position) {
             switch (position) {
                 case 0:
-                    home1 tab1 = new home1();
+                    Foodsearch tab1 = new Foodsearch();
                     return tab1;
 
                 case 1:
-                    home2 tab2 = new home2();
+                    Gadgets tab2 = new Gadgets();
                     return tab2;
 
                 default:
@@ -115,21 +115,4 @@ public class MainActivity extends AppCompatActivity {
     //    }
     //    return null;
     //}
-
-    // Code of Home1
-
-    // Code of Home 2
-    public void irbmr(View view) {
-        Intent i = new Intent(this, bmr.class );
-        startActivity(i);
-    }
-    public void irwhr(View view) {
-        Intent i = new Intent(this, whr.class );
-        startActivity(i);
-    }
-    public void irbmi(View view) {
-        Intent i = new Intent(this, bmi.class );
-        startActivity(i);
-    }
-
 }

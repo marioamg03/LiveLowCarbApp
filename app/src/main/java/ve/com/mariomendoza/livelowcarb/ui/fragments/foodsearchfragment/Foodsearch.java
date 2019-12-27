@@ -1,4 +1,4 @@
-package ve.com.mariomendoza.livelowcarb.ui.fragments;
+package ve.com.mariomendoza.livelowcarb.ui.fragments.foodsearchfragment;
 
 import androidx.fragment.app.Fragment;
 import android.os.Bundle;
@@ -23,7 +23,7 @@ import java.util.Objects;
 import ve.com.mariomendoza.livelowcarb.R;
 import ve.com.mariomendoza.livelowcarb.data.models.FoodsModel;
 
-public class home1 extends Fragment {
+public class Foodsearch extends Fragment {
 
     // Text donde coloco los datos
     private TextView foodt,carbt,proteint,fatt,caloriet,basedt;
@@ -66,7 +66,7 @@ public class home1 extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View rootView = inflater.inflate(R.layout.home1, container, false);
+        View rootView = inflater.inflate(R.layout.fragment_foodsearch, container, false);
         View Buscar = rootView.findViewById(R.id.search);
 
 
@@ -3477,7 +3477,7 @@ public class home1 extends Fragment {
         List<FoodsModel> foodsModelList = new ArrayList<>();
 
 
-        for (int i = 0; i < 501; i++){
+        for (int i = 0; i < 501; i++) {
             Alimentos[i] = food[i];
 
             FoodsModel foodsModel = new FoodsModel();

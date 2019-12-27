@@ -1,4 +1,4 @@
-package ve.com.mariomendoza.livelowcarb.ui.fragments;
+package ve.com.mariomendoza.livelowcarb.ui.fragments.gadgetsfragment.bmr;
 
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
@@ -12,7 +12,7 @@ import java.text.DecimalFormat;
 
 import ve.com.mariomendoza.livelowcarb.R;
 
-public class bmr extends AppCompatActivity {
+public class Bmr extends AppCompatActivity {
 
     private EditText weigth,heigth,age;
     private TextView day,dayact;
@@ -21,7 +21,7 @@ public class bmr extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.bmr);
+        setContentView(R.layout.fragment_gadgets_bmr);
 
         // Created variables for the app bmr1
 
@@ -41,8 +41,6 @@ public class bmr extends AppCompatActivity {
         clean();
     }
 
-
-
     public void bmrcalculate (View view) {
 
         String valor1 = weigth.getText().toString();
@@ -55,20 +53,13 @@ public class bmr extends AppCompatActivity {
             Toast notificacion = Toast.makeText(this, getString(R.string.enter_your_gender), Toast.LENGTH_LONG);
             notificacion.show();
 
-        }
-
-        //Si se ingreso el genero verifico los campos
-        else{
+        } else { //Si se ingreso el genero verifico los campos
 
             //Chequeo los campos.
-            if (valor1.equals("") || valor2.equals("") || valor3.equals(""))
-            {
+            if (valor1.equals("") || valor2.equals("") || valor3.equals("")) {
                 Toast notificacion = Toast.makeText(this, getString(R.string.please_fill_text), Toast.LENGTH_LONG);
                 notificacion.show();
-            }
-            //Si los campos tienen valores les asigno valores.
-            else
-            {
+            } else { //Si los campos tienen valores les asigno valores.
                 //asigno valor numerico a los campos
                 double weigth = Double.parseDouble(valor1);
                 double heigth = Double.parseDouble(valor2);
@@ -85,8 +76,7 @@ public class bmr extends AppCompatActivity {
 
                     Toast notificacion = Toast.makeText(this, getString(R.string.enter_your_physical_text), Toast.LENGTH_LONG);
                     notificacion.show();
-                }
-                else{
+                } else {
 
                     //Calculo el consumo de anergia diario sin esfuerzo fisico y luego lo muestro.
 

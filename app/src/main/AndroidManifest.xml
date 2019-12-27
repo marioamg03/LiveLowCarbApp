@@ -27,21 +27,21 @@
         <!-- Configuracion  de los temas de las paginas de Gadgets -->
 
         <!-- Configuracion de la pagina BMR -->
-        <activity android:name="ve.com.mariomendoza.livelowcarb.ui.fragments.bmr"
+        <activity android:name=".ui.fragments.gadgetsfragment.bmr.Bmr"
             android:screenOrientation="portrait"
             android:label="@string/app_name"
             android:theme="@style/AppTheme">
         </activity>
 
         <!-- Configuracion de la pagina WHR -->
-        <activity android:name="ve.com.mariomendoza.livelowcarb.ui.fragments.whr"
+        <activity android:name=".ui.fragments.gadgetsfragment.whr.Whr"
             android:screenOrientation="portrait"
             android:label="@string/app_name"
             android:theme="@style/AppTheme">
         </activity>
 
         <!-- Configuracion de la pagina BMI -->
-        <activity android:name="ve.com.mariomendoza.livelowcarb.ui.fragments.bmi"
+        <activity android:name=".ui.fragments.gadgetsfragment.bmi.Bmi"
             android:screenOrientation="portrait"
             android:label="@string/app_name"
             android:theme="@style/AppTheme">

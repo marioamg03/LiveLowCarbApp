@@ -1,4 +1,4 @@
-package ve.com.mariomendoza.livelowcarb.ui.fragments;
+package ve.com.mariomendoza.livelowcarb.ui.fragments.gadgetsfragment.bmi;
 
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
@@ -8,13 +8,11 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-
-
 import java.text.DecimalFormat;
 
 import ve.com.mariomendoza.livelowcarb.R;
 
-public class bmi extends AppCompatActivity {
+public class Bmi extends AppCompatActivity {
 
     private EditText mass, heigth;
     private TextView result_bmi, body;
@@ -23,9 +21,9 @@ public class bmi extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.bmi);
+        setContentView(R.layout.fragment_gadgets_bmi);
 
-        // Created variables for the app whr
+        // Created variables for the app Whr
 
         mass = findViewById(R.id.mass);
         heigth = findViewById(R.id.heigth);
@@ -50,8 +48,7 @@ public class bmi extends AppCompatActivity {
             Toast notificacion = Toast.makeText(this,getString(R.string.please_fill_text), Toast.LENGTH_LONG);
             notificacion.show();
 
-        }
-        else {
+        } else {
 
             //asigno valor numerico a los campos
             double mass = Double.parseDouble(valor1);
