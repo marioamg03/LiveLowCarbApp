@@ -63,17 +63,18 @@ public class Foodsearch extends Fragment {
     //Variable que me indica si hice una transformacion antes.
     boolean gr = true;
 
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        llenado();
+        llenadoA();
+
         View rootView = inflater.inflate(R.layout.fragment_foodsearch, container, false);
         View Buscar = rootView.findViewById(R.id.search);
-
 
         Buscar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Busqueda(v);
+                Busqueda();
             }
 
         });
@@ -148,86 +149,71 @@ public class Foodsearch extends Fragment {
             }
         });
 
+        Comida_a_buscar = rootView.findViewById(R.id.autoCompleteTextView);
 
-        return rootView;
-    }
+        foodt = rootView.findViewById(R.id.food);
+        carbt = rootView.findViewById(R.id.carb);
+        proteint = rootView.findViewById(R.id.protein);
+        fatt = rootView.findViewById(R.id.fat);
+        caloriet = rootView.findViewById(R.id.calorie);
+        basedt = rootView.findViewById(R.id.Basado);
 
-    @Override
-    public void onViewCreated(View view, Bundle savedInstanceState) {
+        toggle = rootView.findViewById(R.id.switch1);
 
-        llenado();
-        llenadoA();
-        ArrayAdapter<String> adapter;
-        adapter = new ArrayAdapter<>(Objects.requireNonNull(getActivity()), android.R.layout.simple_dropdown_item_1line, Alimentos);
-        Comida_a_buscar = view.findViewById(R.id.autoCompleteTextView);
+
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(requireActivity(), android.R.layout.simple_dropdown_item_1line, Alimentos);
         Comida_a_buscar.setAdapter(adapter);
-
-        foodt = view.findViewById(R.id.food);
-        carbt = view.findViewById(R.id.carb);
-        proteint = view.findViewById(R.id.protein);
-        fatt = view.findViewById(R.id.fat);
-        caloriet = view.findViewById(R.id.calorie);
-        basedt = view.findViewById(R.id.Basado);
-
-        toggle = view.findViewById(R.id.switch1);
 
         toggle.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
 
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-
                 if(isChecked){
                     toggle.setText("Oz");
 
-                    if (!encontrado)
-                    {
+                    if (!encontrado) {
                         foodt.setText( "");
                         carbt.setText("");
                         proteint.setText("");
                         fatt.setText("");
                         caloriet.setText("");
-                    }
-                    else
-                    {
+                    } else {
                         seekBar.setProgress(90);
 
-                        if (!gr)
-                            {
-                                resulBased = getString(R.string.based_on_text_title) + " 3.5oz (100.0Gr)";
-                                basedt.setText(resulBased);
+                        if (!gr) {
+                            resulBased = getString(R.string.based_on_text_title) + " 3.5oz (100.0Gr)";
+                            basedt.setText(resulBased);
 
-                                resulCarbs = df.format(Carbohidratos) + " oz";
-                                carbt.setText(resulCarbs);
+                            resulCarbs = df.format(Carbohidratos) + " oz";
+                            carbt.setText(resulCarbs);
 
-                                resulProtein = df.format(Proteinas) + " oz";
-                                proteint.setText(resulProtein);
+                            resulProtein = df.format(Proteinas) + " oz";
+                            proteint.setText(resulProtein);
 
-                                resulFat = df.format(Grasas) + " oz";
-                                fatt.setText(resulFat);
+                            resulFat = df.format(Grasas) + " oz";
+                            fatt.setText(resulFat);
 
-                                resulCalori = df.format(Calorias) + " Kcal";
-                                caloriet.setText(resulCalori);
-                            }
-                            else
-                            {
-                                resulBased = getString(R.string.based_on_text_title) + " 3.5oz (100.0Gr)";
-                                basedt.setText(resulBased);
+                            resulCalori = df.format(Calorias) + " Kcal";
+                            caloriet.setText(resulCalori);
+                        } else {
+                            resulBased = getString(R.string.based_on_text_title) + " 3.5oz (100.0Gr)";
+                            basedt.setText(resulBased);
 
-                                resulCarbs = df.format(Carbohidratos / 28.35) + " oz";
-                                carbt.setText(resulCarbs);
+                            resulCarbs = df.format(Carbohidratos / 28.35) + " oz";
+                            carbt.setText(resulCarbs);
 
-                                resulProtein = df.format(Proteinas / 28.35) + " oz";
-                                proteint.setText(resulProtein);
+                            resulProtein = df.format(Proteinas / 28.35) + " oz";
+                            proteint.setText(resulProtein);
 
-                                resulFat = df.format(Grasas / 28.35) + " oz";
-                                fatt.setText(resulFat);
+                            resulFat = df.format(Grasas / 28.35) + " oz";
+                            fatt.setText(resulFat);
 
-                                resulCalori = df.format( Calorias) + " Kcal";
-                                caloriet.setText(resulCalori);
+                            resulCalori = df.format( Calorias) + " Kcal";
+                            caloriet.setText(resulCalori);
 
-                                gr = false;
+                            gr = false;
 
-                            }
+                        }
                     }
 
                     seekBar.setProgress(90);
@@ -235,18 +221,14 @@ public class Foodsearch extends Fragment {
                 else{
                     toggle.setText("Gr");
 
-                    if (!encontrado)
-                    {
+                    if (!encontrado) {
                         foodt.setText( "");
                         carbt.setText("");
                         proteint.setText("");
                         fatt.setText("");
                         caloriet.setText("");
-                    }
-                    else
-                    {
-                        if (gr)
-                        {
+                    } else {
+                        if (gr) {
                             resulBased = getString(R.string.based_on_text_title) + " 100.0Gr (3.5oz)";
                             basedt.setText(resulBased);
 
@@ -261,9 +243,7 @@ public class Foodsearch extends Fragment {
 
                             resulCalori = df.format(Calorias) + " Kcal";
                             caloriet.setText(resulCalori);
-                        }
-                        else
-                        {
+                        } else {
                             resulBased = getString(R.string.based_on_text_title) + " 100.0Gr (3.5oz)";
                             basedt.setText(resulBased);
 
@@ -285,12 +265,13 @@ public class Foodsearch extends Fragment {
 
                     seekBar.setProgress(90);
                 }
-
             }
         });
+
+        return rootView;
     }
 
-    public void Busqueda (View v){   // Your method
+    public void Busqueda () {   // Your method
 
         String comida;
         comida = Comida_a_buscar.getText().toString();
@@ -300,8 +281,7 @@ public class Foodsearch extends Fragment {
         Double car;
         Double Pro;
 
-        if (comida.equals(""))
-        {
+        if (comida.equals("")) {
             foodt.setText(getString(R.string.please_fill_text));
             carbt.setText("");
             proteint.setText("");
@@ -312,14 +292,12 @@ public class Foodsearch extends Fragment {
             Carbohidratos = 0;
             Proteinas = 0;
             seekBar.setVisibility(View.INVISIBLE);
-        }
-        else
-        {
-            for (int i = 0; i < 100; i++)
-            {
+
+        } else {
+            for (int i = 0; i < 100; i++) {
                 Escaneo = food[i];
-                if (Escaneo.toLowerCase().equals(comida.toLowerCase()))
-                {
+
+                if (Escaneo.toLowerCase().equals(comida.toLowerCase())) {
                     seekBar.setVisibility(View.VISIBLE);
                     if (!toggle.isChecked()) {
                         foodt.setText(food[i]);
@@ -349,25 +327,9 @@ public class Foodsearch extends Fragment {
                         encontrado = true;
                         seekBar.setProgress(90);
 
-                    //    if (car <= 15)
-                    //    {
-                    //        bueno();
-                    //    }
-
-                    //    if (car > 15 && car < 30)
-                      //  {
-                    //        regular();
-                      //  }
-
-                    //    if (car >= 30)
-                      //  {
-                    //        malo();
-                      //  }
-
                     } else {
                         if (toggle.isChecked()) {
                             foodt.setText(food[i]);
-
 
                             resulCarbs = df.format(Carbs[i] / 28.35) + " oz";
                             carbt.setText(resulCarbs);
@@ -395,22 +357,6 @@ public class Foodsearch extends Fragment {
                             Comida_a_buscar.setText("");
                             encontrado = true;
                             seekBar.setProgress(90);
-
-                          //  if (car <= 15)
-                          //  {
-                          //      bueno();
-                          //  }
-                          //
-                          //  if (car > 15 && car < 30)
-                          //  {
-                          //      regular();
-                          //  }
-                          //
-                          //  if (car >= 30)
-                          //  {
-                          //      malo();
-                          //  }
-
                         }
                     }
                 } else {
@@ -431,11 +377,10 @@ public class Foodsearch extends Fragment {
 
     }
 
-
     private final String[] Alimentos = new String[501];
 
     // Codigo de llenado de los vectores de comida
-    public void llenado (){
+    public void llenado () {
 
         food[0] ="Abalone (Mixed Species)";
         calories[0] = 105;
@@ -3471,11 +3416,9 @@ public class Foodsearch extends Fragment {
 
 
     }
-
-    public void llenadoA (){
+    private void llenadoA() {
 
         List<FoodsModel> foodsModelList = new ArrayList<>();
-
 
         for (int i = 0; i < 501; i++) {
             Alimentos[i] = food[i];
@@ -3494,8 +3437,6 @@ public class Foodsearch extends Fragment {
         String json = new Gson().toJson(foodsModelList);
 
         Log.e("COMIDA", json);
-
     }
-
 
 }

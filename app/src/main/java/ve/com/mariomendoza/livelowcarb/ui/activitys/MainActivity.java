@@ -1,10 +1,8 @@
 package ve.com.mariomendoza.livelowcarb.ui.activitys;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -16,11 +14,8 @@ import androidx.viewpager.widget.ViewPager;
 import com.google.android.material.tabs.TabLayout;
 
 import ve.com.mariomendoza.livelowcarb.R;
-import ve.com.mariomendoza.livelowcarb.ui.fragments.gadgetsfragment.bmi.Bmi;
-import ve.com.mariomendoza.livelowcarb.ui.fragments.gadgetsfragment.bmr.Bmr;
 import ve.com.mariomendoza.livelowcarb.ui.fragments.foodsearchfragment.Foodsearch;
 import ve.com.mariomendoza.livelowcarb.ui.fragments.gadgetsfragment.Gadgets;
-import ve.com.mariomendoza.livelowcarb.ui.fragments.gadgetsfragment.whr.Whr;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -45,7 +40,6 @@ public class MainActivity extends AppCompatActivity {
 
         TabLayout tabLayout = findViewById(R.id.tabs);
         tabLayout.setupWithViewPager(mViewPager);
-
     }
 
     @Override
@@ -74,7 +68,7 @@ public class MainActivity extends AppCompatActivity {
      * A {@link FragmentPagerAdapter} that returns a fragment corresponding to
      * one of the sections/tabs/pages.
      */
-    public class SectionsPagerAdapter extends FragmentPagerAdapter {
+    public static class SectionsPagerAdapter extends FragmentPagerAdapter {
 
         public SectionsPagerAdapter(FragmentManager fm) {
             super(fm);
@@ -102,6 +96,7 @@ public class MainActivity extends AppCompatActivity {
             return 2;
         }
     }
+
     //este codigo se utiliza para colocarle nomnbres a las pestañas
     //@Override
     //public CharSequence getPageTitle(int position) {

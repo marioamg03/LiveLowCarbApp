@@ -1,8 +1,10 @@
 package ve.com.mariomendoza.livelowcarb.ui.fragments.gadgetsfragment.bmr;
 
 import androidx.appcompat.app.AppCompatActivity;
+
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.TextView;
@@ -17,14 +19,14 @@ public class Bmr extends AppCompatActivity {
     private EditText weigth,heigth,age;
     private TextView day,dayact;
     private RadioButton female,men,low,average,high;
+    private Button btnCalculate, btnClean;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.fragment_gadgets_bmr);
 
-        // Created variables for the app bmr1
-
+        // Created variables for the app bmr
         weigth = findViewById(R.id.weigth);
         heigth = findViewById(R.id.heigth);
         age = findViewById(R.id.age);
@@ -38,10 +40,27 @@ public class Bmr extends AppCompatActivity {
         average = findViewById(R.id.average);
         high = findViewById(R.id.high);
 
+        btnCalculate = findViewById(R.id.calculate);
+        btnClean = findViewById(R.id.clean);
+
+        btnCalculate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                bmrcalculate();
+            }
+        });
+
+        btnClean.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                clean();
+            }
+        });
+
         clean();
     }
 
-    public void bmrcalculate (View view) {
+    public void bmrcalculate () {
 
         String valor1 = weigth.getText().toString();
         String valor2 = heigth.getText().toString();
@@ -68,8 +87,6 @@ public class Bmr extends AppCompatActivity {
                 //declaro las variables TMB y fisico
                 double TMB = 0;
                 double fisico = 0;
-
-
 
                 // Y verifico el esfuerzo fisico
                 if (!low.isChecked() && !average.isChecked() && !high.isChecked()) {
@@ -115,14 +132,9 @@ public class Bmr extends AppCompatActivity {
                 }
             }
         }
-}
-
-    public void callclean (View view) {
-        clean();
     }
 
     public void clean () {
-
         weigth.setText("");
         heigth.setText("");
         age.setText("");
@@ -133,7 +145,6 @@ public class Bmr extends AppCompatActivity {
         low.setChecked(false);
         average.setChecked(false);
         high.setChecked(false);
-
     }
 
 }

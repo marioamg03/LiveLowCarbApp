@@ -267,28 +267,26 @@
 
 
                     <Button
-                        android:text="@string/calculate_text_button"
+                        android:id="@+id/calculate"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/calculate"
                         android:layout_weight="1"
                         android:background="?android:attr/actionBarItemBackground"
+                        android:text="@string/calculate_text_button"
                         android:textColor="@android:color/background_light"
-                        android:textStyle="normal|bold"
                         android:textSize="16sp"
-                        android:onClick="bmrcalculate" />
+                        android:textStyle="normal|bold" />
 
                     <Button
-                        android:text="@string/clean_text_button"
+                        android:id="@+id/clean"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/clean"
                         android:layout_weight="0.24"
                         android:background="?android:attr/actionBarItemBackground"
+                        android:text="@string/clean_text_button"
                         android:textColor="@android:color/background_light"
-                        android:textStyle="normal|bold"
                         android:textSize="16sp"
-                        android:onClick="callclean" />
+                        android:textStyle="normal|bold" />
                 </LinearLayout>
 
                 <LinearLayout

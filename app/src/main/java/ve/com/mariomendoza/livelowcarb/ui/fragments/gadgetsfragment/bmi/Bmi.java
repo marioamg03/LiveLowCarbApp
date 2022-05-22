@@ -3,6 +3,7 @@ package ve.com.mariomendoza.livelowcarb.ui.fragments.gadgetsfragment.bmi;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -17,6 +18,7 @@ public class Bmi extends AppCompatActivity {
     private EditText mass, heigth;
     private TextView result_bmi, body;
     private ImageView image;
+    private Button btnCalculate, btnClean;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,10 +35,27 @@ public class Bmi extends AppCompatActivity {
 
         image = findViewById(R.id.image);
 
+        btnCalculate = findViewById(R.id.calculate);
+        btnClean = findViewById(R.id.clean);
+
+        btnCalculate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                bmicalculate();
+            }
+        });
+
+        btnClean.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                clean();
+            }
+        });
+
         clean();
     }
 
-    public void bmicalculate (View view) {
+    public void bmicalculate () {
 
         image.setVisibility(View.INVISIBLE);
 
@@ -94,15 +113,6 @@ public class Bmi extends AppCompatActivity {
             }
             image.setVisibility(View.VISIBLE);
         }
-
-
-
-    }
-
-    public void callclean (View view) {
-
-        clean();
-
     }
 
     public void clean () {

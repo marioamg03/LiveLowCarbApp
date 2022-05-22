@@ -44,49 +44,43 @@
                 android:gravity="center">
 
                 <!--Espacio en blanco entre las imagenes-->
-                <LinearLayout
-                    android:orientation="horizontal"
-                    android:layout_width="match_parent"
-                    android:layout_height="10dp"/>
                 <!--Espacio en blanco entre las imagenes-->
 
                 <LinearLayout
-                    android:orientation="horizontal"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="150dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
 
                     <ImageButton
                         android:id="@+id/btn_go_to_bmr"
-                        app:srcCompat="@drawable/imb"
+                        android:layout_width="122dp"
                         android:layout_height="122dp"
-                        android:layout_width="122dp"/>
+                        app:srcCompat="@drawable/imb" />
 
                     <!--Espacio en blanco entre las imagenes y el texto-->
-                    <LinearLayout
-                        android:orientation="vertical"
-                        android:layout_width="10dp"
-                        android:layout_height="match_parent"/>
                     <!--Espacio en blanco entre las imagenes y el texto-->
 
                     <LinearLayout
-                        android:orientation="vertical"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:gravity="center">
+                        android:layout_marginLeft="10dp"
+                        android:gravity="center"
+                        android:orientation="vertical">
 
                         <TextView
-                            android:text="@string/bmr_text_title"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
                             android:id="@+id/textView3"
-                            android:textStyle="normal|bold"
-                            android:textColor="@android:color/background_light" />
-
-                        <TextView
-                            android:text="@string/bmr_text"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:text="@string/bmr_text_title"
+                            android:textColor="@android:color/background_light"
+                            android:textStyle="normal|bold" />
+
+                        <TextView
                             android:id="@+id/textView4"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/bmr_text"
                             android:textColor="@android:color/background_light" />
 
                     </LinearLayout>
@@ -94,63 +88,54 @@
                 </LinearLayout>
 
                 <!--Espacio en blanco entre las imagenes-->
-                <LinearLayout
-                    android:orientation="horizontal"
-                    android:layout_width="match_parent"
-                    android:layout_height="10dp"/>
                 <!--Espacio en blanco entre las imagenes-->
 
                 <LinearLayout
-                    android:orientation="horizontal"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="150dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
 
                     <ImageButton
                         android:id="@+id/btn_go_to_whr"
-                        app:srcCompat="@drawable/icc"
+                        android:layout_width="122dp"
                         android:layout_height="122dp"
-                        android:layout_width="122dp"/>
+                        app:srcCompat="@drawable/icc" />
 
                     <!--Espacio en blanco entre las imagenes y el texto-->
-                    <LinearLayout
-                        android:orientation="vertical"
-                        android:layout_width="10dp"
-                        android:layout_height="match_parent"/>
                     <!--Espacio en blanco entre las imagenes y el texto-->
 
                     <LinearLayout
-                        android:orientation="vertical"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:gravity="center">
+                        android:layout_marginLeft="10dp"
+                        android:gravity="center"
+                        android:orientation="vertical">
 
                         <TextView
-                            android:text="@string/whr_text_title"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
                             android:id="@+id/textView5"
-                            android:textStyle="normal|bold"
-                            android:textColor="@android:color/background_light" />
-
-                        <TextView
-                            android:text="@string/whr_text"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:text="@string/whr_text_title"
+                            android:textColor="@android:color/background_light"
+                            android:textStyle="normal|bold" />
+
+                        <TextView
                             android:id="@+id/textView6"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/whr_text"
                             android:textColor="@android:color/background_light" />
                     </LinearLayout>
                 </LinearLayout>
 
                 <!--Espacio en blanco entre las imagenes-->
-            <LinearLayout
-                android:orientation="horizontal"
-                android:layout_width="match_parent"
-                android:layout_height="10dp"/>
                 <!--Espacio en blanco entre las imagenes-->
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="150dp"
+                    android:gravity="center"
                     android:orientation="horizontal">
 
                     <ImageButton
@@ -160,15 +145,12 @@
                         app:srcCompat="@drawable/imc" />
 
                     <!--Espacio en blanco entre las imagenes y el texto-->
-                    <LinearLayout
-                        android:layout_width="10dp"
-                        android:layout_height="match_parent"
-                        android:orientation="vertical" />
                     <!--Espacio en blanco entre las imagenes y el texto-->
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
                         android:gravity="center"
                         android:orientation="vertical">
 
